@@ -75,9 +75,6 @@ a:hover {
     align-content: center;
     font-family: Garamond, Georgia, sans-serif;
     font-size: 20px;
-    width: 100%;
-    margin: auto; /* Centers the div if it's less than 100% width */
-    padding: 2rem;
 }
 
 #footer-container {
