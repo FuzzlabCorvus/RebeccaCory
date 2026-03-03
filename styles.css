@@ -9,6 +9,8 @@
     text-align: center;
     font-family: Garamond, Georgia, sans-serif;
     font-size: 24px;
+    position: sticky;
+    top: 0;
 }
 
 .nav {
@@ -69,7 +71,7 @@ a:hover {
 
 .main-content {
     display:grid;
-    background-color: #D2C1B6;
+    background-color: #456882;
     color: #1B3C53;
     justify-content: left;
     align-content: center;
