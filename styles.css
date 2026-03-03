@@ -1,6 +1,7 @@
 body {
     padding: 0;
     margin: 0;
+    background-color: #456882;
 }
 
 
@@ -112,6 +113,7 @@ a:hover {
     color: #D2C1B6;
     display: grid;
     justify-content: center;
+    margin-top: 100px;
 }
 
 input[type=text], select, textarea {
