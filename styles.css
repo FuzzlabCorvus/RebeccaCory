@@ -21,11 +21,11 @@ header {
     font-size: 24px;
     position: fixed;
     top: 0;  
-    transition: top 0.3s ease-in-out; /* Smooth transition */
+    transition: top 0.5s ease-in-out; /* Smooth transition */
 }
 
 .header-hidden {
-  top: -160px; /* Moves header off-screen */
+    top: -160px; /* Moves header off-screen */
 }
 
 
@@ -82,6 +82,7 @@ a:hover {
     width: 100%;
     height: 600px;
     margin: auto; 
+    padding-top: 60px;
 }
 
 .main-content {
