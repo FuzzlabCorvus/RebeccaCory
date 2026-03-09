@@ -13,6 +13,7 @@ h1 {
 header {
     display: grid;
     width: 100%;
+    height: auto;
     padding: 0;
     margin: 0;
     background-color: #D2C1B6;
@@ -97,7 +98,24 @@ a:hover {
     font-size: 24px;
 }
 
-#footer-container {
+.bio {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    margin-top: 160px;
+    align-items: center;
+    padding: 12px;
+    gap: 20px;
+}
+
+#headshot {
+    width: 250px;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #1B3C53;
+}
+
+footer {
     display: grid;
     padding: 4px;
     margin: 0;
