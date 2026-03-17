@@ -13,14 +13,42 @@
 
   <header>
     <h1>Rebecca Cory, Ph.D</h1>
+
+          
+          
       <nav>
+
+        <ul class="sidebar"> 
+          <li onclick=hideSidebar()><a href="#">X</a></li>
+          <li><a href="index.html">Home</a></li>       
+          <li><a href="parents.html">For Parents</a></li>
+          <li><a href="students.html">For Students</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li></ul>
+        <ul>
+
+        <button id="hamburger" aria-expanded="true" onclick=showSidebar()>
+
+          <span>Menu</span>
+          
+          <svg  viewBox="0 0 100 80" width="40" height="40">
+          <rect width="100" height="20" rx="8"></rect>
+          <rect y="30" width="100" height="20" rx="8"></rect>
+          <rect y="60" width="100" height="20" rx="8"></rect>
+          </svg>
+          
+        </button>
+        
         <ul class="nav"> 
           <li><a href="index.html">Home</a></li>       
           <li><a href="parents.html">For Parents</a></li>
           <li><a href="students.html">For Students</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html">Contact</a></li></ul>
+        <ul>
+
       </nav>
     </header>  
 
@@ -47,6 +75,6 @@
         <h6 class="copyright">Website © <script type="text/javascript">var year = new Date();document.write(year.getFullYear());</script>
                 <a href="https://fuzzlabcorvus.github.io/cv/v2/">Fuzzlab Interactive</h6></a>
 </footer>
-<script src="script.js" defer></script>
+<script src="script.js"></script>
 </body>
 </html>
