@@ -26,7 +26,7 @@ header {
     font-size: 24px;
     position: fixed;
     top: 0;  
-    transition: top 0.5s ease-in-out; /* Smooth transition */
+    transition: top .75s ease-in-out; /* Smooth transition */
 }
 
 .header-hidden {
@@ -246,9 +246,10 @@ span {
 
     .tree {
         display: flex;
+        height: 3em;
+        align-items: center;
     }
 
-    #hamburger { display: flex; }
 
     .nav {
         display: none;
