@@ -244,6 +244,10 @@ span {
 
 @media (max-width: 760px) {
 
+    .tree {
+        display: flex;
+    }
+
     #hamburger { display: flex; }
 
     .nav {
