@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rebecca Cory, Ph.D. - Higher Education Consultant</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <div class="container nav">
+            <div class="logo">Rebecca Cory, Ph.D.</div>
+
+            <button id="hamburger" aria-expanded="true" onclick=showSidebar()>
+
+            <span>Menu</span>
+            
+            <svg  viewBox="0 0 100 80" width="40" height="40">
+            <rect width="100" height="20" rx="8"></rect>
+            <rect y="30" width="100" height="20" rx="8"></rect>
+            <rect y="60" width="100" height="20" rx="8"></rect>
+            </svg>
+          
+            </button> 
+
+            <ul class="nav-links">
+                <li><a href="#about">Home</a></li>
+                <li><a href="#services">About</a></li>
+                <li><a href="#contact">For Parents</a></li>
+                <li><a href="#contact">For Students</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="sidebar">
+            <ul class="sidebar"> 
+                <li onclick=hideSidebar()><a href="#">X</a></li>
+                <li><a href="index.html">Home</a></li>       
+                <li><a href="parents.html">For Parents</a></li>
+                <li><a href="students.html">For Students</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li></ul>
+            <ul>
+        </div>
+
+        <div class="hamburger">
+ 
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Strategic Consulting for Higher Education</h1>
+            <h2>Empowering Neurodivergent Teens With the Tools to Succeed in College and Beyond.</h2>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Services</h2>
+            <div class="grid">
+                <div class="card"><h3>Strategy</h3><p>Long-term planning.</p></div>
+                <div class="card"><h3>Marketing</h3><p>Brand positioning.</p></div>
+                <div class="card"><h3>Operations</h3><p>Efficiency optimization.</p></div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
