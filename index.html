@@ -1,80 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rebecca Cory, Ph.D</title>
-  <link rel="stylesheet" href="styles.css">
-  <!-- Color Palette: https://colorhunt.co/palette/1b3c53234c6a456882d2c1b6 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rebecca Cory, Ph.D. - Higher Education Consultant</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
-
 <body>
 
-  <header class="tree">
-    <h1 class="title">Rebecca Cory, Ph.D</h1>
+    <header>
+        <div class="container nav">
+            <div class="logo">Rebecca Cory, Ph.D.</div>
 
-          <button id="hamburger" aria-expanded="true" onclick=showSidebar()>
+            <button id="hamburger" aria-expanded="true" onclick=showSidebar()>
 
-          <span>Menu</span>
+            <span>Menu</span>
+            
+            <svg  viewBox="0 0 100 80" width="40" height="40">
+            <rect width="100" height="20" rx="8"></rect>
+            <rect y="30" width="100" height="20" rx="8"></rect>
+            <rect y="60" width="100" height="20" rx="8"></rect>
+            </svg>
           
-          <svg  viewBox="0 0 100 80" width="40" height="40">
-          <rect width="100" height="20" rx="8"></rect>
-          <rect y="30" width="100" height="20" rx="8"></rect>
-          <rect y="60" width="100" height="20" rx="8"></rect>
-          </svg>
-          
-        </button>       
-          
-      <nav>
+            </button> 
 
-        <ul class="sidebar"> 
-          <li onclick=hideSidebar()><a href="#">X</a></li>
-          <li><a href="index.html">Home</a></li>       
-          <li><a href="parents.html">For Parents</a></li>
-          <li><a href="students.html">For Students</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li></ul>
-        <ul>
+            <ul class="nav-links">
+                <li><a href="#about">Home</a></li>
+                <li><a href="#services">About</a></li>
+                <li><a href="#contact">For Parents</a></li>
+                <li><a href="#contact">For Students</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <ul class="sidebar"> 
+                <li onclick=hideSidebar()><a href="#">X</a></li>
+                <li><a href="index.html">Home</a></li>       
+                <li><a href="parents.html">For Parents</a></li>
+                <li><a href="students.html">For Students</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li></ul>
+            <ul>
+        </div>
 
 
+    </header>
 
-        <ul class="nav"> 
-          <li><a href="index.html">Home</a></li>       
-          <li><a href="parents.html">For Parents</a></li>
-          <li><a href="students.html">For Students</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li></ul>
-        <ul>
+    <section class="hero">
+        <div class="container">
+            <h1>Strategic Consulting for Higher Education</h1>
+            <h2>Empowering Neurodivergent Teens With the Tools to Succeed in College and Beyond.</h2>
+        </div>
+    </section>
 
-      </nav>
-    </header>  
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Services</h2>
+            <div class="grid">
+                <div class="card"><h3>Strategy</h3><p>Long-term planning.</p></div>
+                <div class="card"><h3>Resources</h3><p>Connections to public and private providers.</p></div>
+                <div class="card"><h3>Life Skills</h3><p>Tools for navigating life's challenges.</p></div>
+            </div>
+        </div>
+    </section>
 
-  <div class="wow-panel">
-    <h1>Empowering 
-    <br>Neurodivergent Teens
-    <br>With Tools to Successfully
-    <br>Navigate Higher Education</h1>
-    </p>
-  </div>
+  <footer>
+  <!-- Copyright Info Script -->
+          <h6 class="copyright">Website © <script type="text/javascript">var year = new Date();document.write(year.getFullYear());</script>
+                  <a href="https://fuzzlabcorvus.github.io/cv/v2/">Fuzzlab Interactive</h6></a>
+  </footer>
 
-<div class="main-content">
-    <p>This is the main content area.</p>
-
-    <p>Prow scuttle parrel provost Sail ho shrouds spirits boom mizzenmast yardarm. Pinnace holystone mizzenmast quarter crow's nest nipperkin grog yardarm hempen halter furl. Swab barque interloper chantey doubloon starboard grog black jack gangway rutters.</p>
-
-    <p>Deadlights jack lad schooner scallywag dance the hempen jig carouser broadside cable strike colors. Bring a spring upon her cable holystone blow the man down spanker Shiver me timbers to go on account lookout wherry doubloon chase. Belay yo-ho-ho keelhaul squiffy black spot yardarm spyglass sheet transom heave to.</p>
-
-    <p>Trysail Sail ho Corsair red ensign hulk smartly boom jib rum gangway. Case shot Shiver me timbers gangplank crack Jennys tea cup ballast Blimey lee snow crow's nest rutters. Fluke jib scourge of the seven seas boatswain schooner gaff booty Jack Tar transom spirits.</p>
-</div>
-
-<footer>
-<!-- Copyright Info Script -->
-        <h6 class="copyright">Website © <script type="text/javascript">var year = new Date();document.write(year.getFullYear());</script>
-                <a href="https://fuzzlabcorvus.github.io/cv/v2/">Fuzzlab Interactive</h6></a>
-</footer>
-<script src="script.js"></script>
 </body>
 </html>

@@ -1,6 +1,7 @@
-// JavaScript
+
 var lastScrollTop = 0;
 var header = document.querySelector('header');
+
 
 window.addEventListener('scroll', function() {
   var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -13,6 +14,8 @@ window.addEventListener('scroll', function() {
   }
   lastScrollTop = scrollTop;
 });
+
+
 
   function showSidebar(){
     const sidebar = document.querySelector('.sidebar')
