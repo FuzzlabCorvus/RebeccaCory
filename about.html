@@ -1,74 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rebecca Cory, Ph.D</title>
-  <link rel="stylesheet" href="styles.css">
-  <!-- Color Palette: https://colorhunt.co/palette/1b3c53234c6a456882d2c1b6 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rebecca Cory, Ph.D. - Higher Education Consultant</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
-
 <body>
 
-  <header class="tree">
-    <h1 class="title">Rebecca Cory, Ph.D</h1>
+    <header>
+        <div class="container nav">
+            <div class="logo">Rebecca Cory, Ph.D.</div>
 
-          <button id="hamburger" aria-expanded="true" onclick=showSidebar()>
+            <button id="hamburger" aria-expanded="true" onclick=showSidebar()>
 
-          <span>Menu</span>
+            <span>Menu</span>
+            
+            <svg  viewBox="0 0 100 80" width="40" height="40">
+            <rect width="100" height="20" rx="8"></rect>
+            <rect y="30" width="100" height="20" rx="8"></rect>
+            <rect y="60" width="100" height="20" rx="8"></rect>
+            </svg>
           
-          <svg  viewBox="0 0 100 80" width="40" height="40">
-          <rect width="100" height="20" rx="8"></rect>
-          <rect y="30" width="100" height="20" rx="8"></rect>
-          <rect y="60" width="100" height="20" rx="8"></rect>
-          </svg>
-          
-        </button>       
-          
-      <nav>
+            </button> 
 
-        <ul class="sidebar"> 
-          <li onclick=hideSidebar()><a href="#">X</a></li>
-          <li><a href="index.html">Home</a></li>       
-          <li><a href="parents.html">For Parents</a></li>
-          <li><a href="students.html">For Students</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li></ul>
-        <ul>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="parents.html">For Parents</a></li>
+                <li><a href="students.html">For Students</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
 
-
-
-        <ul class="nav"> 
-          <li><a href="index.html">Home</a></li>       
-          <li><a href="parents.html">For Parents</a></li>
-          <li><a href="students.html">For Students</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li></ul>
-        <ul>
-
-      </nav>
-    </header>   
+        <div>
+            <ul class="sidebar"> 
+                <li onclick=hideSidebar()><a href="#">X</a></li>
+                <li><a href="index.html">Home</a></li>       
+                <li><a href="parents.html">For Parents</a></li>
+                <li><a href="students.html">For Students</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li></ul>
+            <ul>
+        </div>
 
 
-<div class="bio">
+    </header>
 
-    <p><img id="headshot" src="images/headshot_cropped.jpg"></p>
+    <!-- <section class="hero">
+        <div class="container">
+            <h1>Strategic Consulting for Higher Education</h1>
+            <h2>Empowering Neurodivergent Teens With the Tools to Succeed in College and Beyond.</h2>
+        </div>
+    </section> -->
 
-    <p>Rebecca C. Cory, Ph.D., is a lifelong college educator and collaborative feminist leader who has focused on educational equity across student and academic affairs since 1994.
-    <br>
-    <br>Most recently the Dean of Curriculum and Assessment at Bellevue College, she has coedited two books on accessible pedagogy including Universal Design in Higher Education, from Principles to Practice (Harvard Education Press). Dr. Cory has served as full-time and sessional faculty at six institutions. As an administrator, she uses collaborative inquiry to support faculty and the wider college community in their shared pursuit of social justice.
-    <br>
-    <br>She relaxes year-round by swimming in the waters of Puget Sound and Lake Washington.</p>
-  </div>
+    <section id="about">
+        <div class="left-column">
+            <img id="headshot" src="images/headshot_cropped.jpg">
+        </div>
 
-<footer>
-<!-- Copyright Info Script -->
-        <h6 class="copyright">Website © <script type="text/javascript">var year = new Date();document.write(year.getFullYear());</script>
-                <a href="https://fuzzlabcorvus.github.io/cv/v2/">Fuzzlab Interactive</h6></a>
-</footer>
-<script src="script.js" defer></script>
+        <div class="right-column">
+            Rebecca C. Cory, Ph.D., is a Seattle based educator with over thirty years’ experience in higher education with roles in faculty and administration. Among her roles has been an academic advisor, worked with students on academic probation, run study skills workshops, served as adjudicator for student conduct hearings, and directly served students with disabilities in the accommodation process.  Most recently Rebecca was Dean of Curriculum and Assessment at Bellevue College. She has coedited two books on accessible pedagogy: Universal Design in Higher Education, from Principles to Practice (Harvard Education Press) and Building Pedagogical Curb Cuts (Syracuse University Press).  
+        <br>
+        <br>
+            Rebecca has a passion for working with students with disabilities.  She holds a Ph.D. in Cultural Foundations of Education with dual foci in Higher Education and Disability Studies from Syracuse University. Her research on college students with disabilities and their disclosure of their disability is the foundation for her current coaching work. In it she found that students do not want to disclose their disabilities in college and will avoid doing so until they are failing a class or otherwise in academic trouble. Seeing this behavior as natural or expected helps Rebecca to coach students on how to self-advocate and disclose their needs before they are backed into a corner.
+        <br>
+        <br>
+            Rebecca was diagnosed with a learning disability (dyslexia) in elementary school and is a survivor of the public-school special education system. Her diagnosis of ADHD came in adulthood, when personal stressors were having an impact on her ability to be successful at work.  She understands from first-hand experience what it means to live with ADHD and/or a learning disability, and how to still be successful in school and in interpersonal relationships. 
+        <br>
+        <br>
+            Rebecca lives in Seattle with her backyard chickens and relaxes year-round by swimming in the waters of Puget Sound and Lake Washington.
+        </div>
+    </section>
+
+  <footer>
+  <!-- Copyright Info Script -->
+          <h6 class="copyright">Website © <script type="text/javascript">var year = new Date();document.write(year.getFullYear());</script>
+                  <a href="https://fuzzlabcorvus.github.io/cv/v2/">Fuzzlab Interactive</h6></a>
+  </footer>
+
 </body>
 </html>
