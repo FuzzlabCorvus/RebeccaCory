@@ -6,7 +6,7 @@
 
 body { 
         font-family: Garamond, Georgia, sans-serif; 
-        font-size: 1.5rem;
+        font-size: 24px;
         margin: 0; 
         color: var(--text); 
         line-height: 1.6; }
@@ -57,7 +57,7 @@ nav {
 
 /* --- Hero Section --- */
 .hero {     
-        display: grid;
+        display: flex;
         background-image: url(images/istockphoto-1988188005-1024x1024.jpg);
         background-repeat: no-repeat;
         background-size: cover;
@@ -207,7 +207,10 @@ input[type=submit]:hover {
 /* --- Responsive Mobile Nav --- */
 @media (max-width: 768px) {
     .nav-links { display: none; } 
-    .hero { padding: 50px 0; }
+    .hero { padding: 50px 0; text-align: center; }
+    .hero h1 { font-size: 2rem; }
+    .hero h2 { font-size: 1.5rem;}
+    .logo { font-size: 1.5rem;}
     #hamburger { display: block; }
     .sidebar { display: none;}
     .image {width: 150px;}
