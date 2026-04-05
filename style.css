@@ -87,6 +87,7 @@ nav {
 
 #hamburger {
     display: none;
+    position: absolute; 
     cursor: pointer; 
     border: none;
     width: auto;
@@ -205,9 +206,15 @@ input[type=submit]:hover {
 
 /* --- Responsive Mobile Nav --- */
 @media (max-width: 768px) {
-
     .nav-links { display: none; } 
     .hero { padding: 50px 0; }
-    #hamburger { display: block; position: absolute; }
+    #hamburger { display: block; }
     .sidebar { display: none;}
+    .image {width: 150px;}
+    #about { display: grid; }
+    .left-column { grid-column: 2 }
+    .right-column { grid-column: 1 / span 3; }
+    .contact-form { grid-template-columns: 1fr; }
+    .contact-message { grid-column: 1; }   
+    .submitbutton { margin-bottom: 40px;}
 }
