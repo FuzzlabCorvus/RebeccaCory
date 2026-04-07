@@ -205,10 +205,11 @@ input[type=submit]:hover {
 #parents {
         display: grid;
         grid-template-columns: repeat(3, 1fr); 
-        grid-template-rows: repeat(6, 1fr); 
+        grid-template-rows: repeat(3, 1fr); 
         gap: 10px; 
         padding: 10px;
         align-items: center;
+        justify-content: center;
         margin-bottom: 0;
 }
 
@@ -240,15 +241,18 @@ input[type=submit]:hover {
 
 .photo_left {
         grid-column: 1;
+        place-self: center;
 }
 
 .photo_center {
         grid-column: 2;
+        place-self: center;
 
 }
 
 .photo_right {
         grid-column: 3;
+        place-self: center;
 
 }
 
