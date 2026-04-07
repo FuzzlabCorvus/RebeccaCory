@@ -58,7 +58,7 @@ nav {
 /* --- Hero Section --- */
 .hero {     
         display: flex;
-        background-image: url(images/graduate_hero_1.jpg);
+        background-image: url(images/graduate_hero.png);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
