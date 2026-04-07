@@ -55,7 +55,6 @@ nav {
         display: flex; 
         gap: 20px; }
 
-/* --- Hero Section --- */
 .hero {     
         display: flex;
         background-image: url(images/graduate_hero.png);
@@ -205,31 +204,23 @@ input[type=submit]:hover {
 
 #parents {
         display: grid;
-        /* Creates 3 columns of equal width (e.g., 1fr each) */
         grid-template-columns: repeat(3, 1fr); 
-        /* Creates 6 rows of equal height (e.g., 1fr each) */
         grid-template-rows: repeat(6, 1fr); 
-        /* Optional: Adds space between cells */
         gap: 10px; 
         padding: 10px;
+        align-items: center;
+        margin-bottom: 0;
 }
 
 .row1 {
-        grid-column: 1 / span 3;
+        grid-column: 1 / span 2;
         grid-row: 1;
 }
 
 .row2 {
         grid-column: 2 / span 2;
         grid-row: 2;
-}
 
-.photo {
-        grid-column: 1;
-        background-image: url(images/Skyline.PNG);
-        background-repeat: no-repeat;
-        background-size:cover;
-        background-position: center;
 }
 
 .row3 {
@@ -242,7 +233,24 @@ input[type=submit]:hover {
         grid-row: 4;
 }
 
+.row5 {
+        grid-column: 1 / span 3;
+        grid-row: 5;
+}
 
+.photo_left {
+        grid-column: 1;
+}
+
+.photo_center {
+        grid-column: 2;
+
+}
+
+.photo_right {
+        grid-column: 3;
+
+}
 
 /* --- Responsive Mobile Nav --- */
 @media (max-width: 768px) {
