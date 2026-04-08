@@ -208,6 +208,12 @@ input[type=submit]:hover {
         grid-column: 2 / span 2;
 }
 
+.about_photo {
+        width: 350px;
+        height: auto;
+        gap: 40px;
+}
+
 #headshot {
     width: 350px;
     height: auto;
