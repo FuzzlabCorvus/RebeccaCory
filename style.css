@@ -209,9 +209,10 @@ input[type=submit]:hover {
 }
 
 .about_photo {
-        width: 350px;
+        width: 250px;
         height: auto;
-        gap: 40px;
+        gap: 30px;
+        border-radius: 12px;
 }
 
 #headshot {
@@ -247,6 +248,18 @@ input[type=submit]:hover {
         margin-bottom: 0;
 }
 
+#services {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); 
+        grid-template-rows: repeat(2, 1fr); 
+        width: 90%;
+        gap: 10px; 
+        margin: auto;
+        padding: 1em;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 0;
+}
 
 
 .row1 {
