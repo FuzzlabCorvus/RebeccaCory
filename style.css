@@ -84,18 +84,8 @@ nav {
       grid-column: 1 / span 2;
       grid-row: 2;}
 
-.services { 
-        padding: 60px 0; }
 
-.grid { 
-        display: grid; 
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-        gap: 30px; }
 
-.card { 
-        background: var(--secondary); 
-        padding: 30px; 
-        border-radius: 25px; }
 
 #hamburger {
     display: none;
@@ -250,8 +240,6 @@ input[type=submit]:hover {
 
 #services {
         display: grid;
-        grid-template-columns: repeat(3, 1fr); 
-        grid-template-rows: repeat(2, 1fr); 
         width: 90%;
         gap: 10px; 
         margin: auto;
@@ -261,6 +249,16 @@ input[type=submit]:hover {
         margin-bottom: 0;
 }
 
+.services-grid { 
+        display: grid; 
+        grid-template-columns: repeat(3, minmax(300px, 1fr)); 
+        gap: 30px; 
+        justify-content: center;}
+
+.card { 
+        background: var(--secondary); 
+        padding: 30px; 
+        border-radius: 25px; }
 
 .row1 {
         grid-column: 1 / span 2;
