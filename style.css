@@ -323,7 +323,11 @@ input[type=submit]:hover {
 
 }
 
-
+.photo-grid { 
+        display: grid; 
+        grid-template-columns: repeat(3, minmax(300px, 1fr)); 
+        gap: 10px; 
+        justify-content: center;}
 
 /* --- Responsive Mobile Nav --- */
 @media (max-width: 768px) {
