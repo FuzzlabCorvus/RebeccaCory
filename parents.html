@@ -15,17 +15,14 @@
                 <a href="index.html">Rebecca Cory, Ph.D.</a>
             </div>
 
-            <button id="hamburger" aria-expanded="true" onclick=showSidebar()>
-
-            <span>Menu</span>
-            
-            <svg  viewBox="0 0 100 80" width="40" height="40">
-            <rect width="100" height="20" rx="8"></rect>
-            <rect y="30" width="100" height="20" rx="8"></rect>
-            <rect y="60" width="100" height="20" rx="8"></rect>
-            </svg>
-          
-            </button> 
+            <button id="hamburger" aria-expanded="false" aria-controls="sidebar" onclick="showSidebar()">
+                <span>Menu</span>
+                <svg viewBox="0 0 100 80" width="40" height="40" aria-hidden="true">
+                    <rect width="100" height="20" rx="8"></rect>
+                    <rect y="30" width="100" height="20" rx="8"></rect>
+                    <rect y="60" width="100" height="20" rx="8"></rect>
+                </svg>
+            </button>
 
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
@@ -34,81 +31,102 @@
                 <li><a href="services.html">Services</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="https://www.linkedin.com/in/rebecca-cory/" target="_blank" rel="noopener">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
-                    <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
-                    </svg></a></li>
+                <li>
+                    <a href="https://www.linkedin.com/in/rebecca-cory/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                            <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+                        </svg>
+                    </a>
+                </li>
             </ul>
         </div>
 
-        <div>
-            <ul class="sidebar"> 
-                <li onclick=hideSidebar()><a href="#"><img src = "images/collapse.png" width="50px"></a></li>
-                <li><a href="index.html">Home</a></li>       
-                <li><a href="parents.html">For Parents</a></li>
-                <li><a href="students.html">For Students</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="https://www.linkedin.com/in/rebecca-cory/" target="_blank" rel="noopener">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
-                    <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
-                    </svg></a></li>
-            </ul>
-        </div>
-
-
+        <!-- Sidebar (mobile menu) -->
+        <ul class="sidebar" id="sidebar" role="navigation" aria-label="Mobile navigation">
+            <li>
+                <button onclick="hideSidebar()" aria-label="Close menu">
+                    <img src="images/collapse.png" width="50" alt="Close">
+                </button>
+            </li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="parents.html">For Parents</a></li>
+            <li><a href="students.html">For Students</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li>
+                <a href="https://www.linkedin.com/in/rebecca-cory/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                        <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+                    </svg>
+                </a>
+            </li>
+        </ul>
     </header>
 
-    <!-- <section class="hero">
-        <div class="container">
-            <h1>Strategic Consulting for Higher Education</h1>
-            <h2>Empowering Neurodivergent Teens With the Tools to Succeed in College and Beyond.</h2>
-        </div>
-    </section> -->
-
+    <!-- Parents Section -->
     <section id="parents">
-        
-        <div class="row1 text">Does your student avoid school, especially on high stakes test dates or when there is a large assignment due?  Is there a lot of squabbling in your house over getting homework done? Do you know your student is smart, but feel like they aren’t living up to their potential? Does your student receive special education services, or did they at some point in the past? Does your student want to go to college, but you are unsure how to get them there?
-  
-        
+
+        <!-- Row 1: intro text + first photo side by side on desktop -->
+        <div class="parents-row parents-row--intro">
+            <div class="parents-text">
+                Does your student avoid school, especially on high stakes test dates or when there is a large assignment due?
+                Is there a lot of squabbling in your house over getting homework done? Do you know your student is smart,
+                but feel like they aren't living up to their potential? Does your student receive special education services,
+                or did they at some point in the past? Does your student want to go to college, but you are unsure how to
+                get them there?
+            </div>
+            <div class="parents-photo">
+                <img src="images/graduates-2.jpg" alt="Graduates" class="parents-img">
+            </div>
         </div>
 
-        <div class="row1 photo_right">
-            <img src="images/TEMP_graduates-2.jpg" style="width: 400px; border-radius: 12px;">
-        </div>
-    
-        <div class="row2 photo_left">
-            <img src="images/IMG_20260407_114005.png" style="width: 350px; border-radius: 12px;">
-        </div>
-        
-        <div class="row2 text">
-            If your student avoids school, struggles with deadlines, or seems capable but underperforming, you are not alone. Rebecca works with students and their parents or caregivers to build understanding around disability, executive functioning, and academic success. She approaches these challenges with the belief that neither students nor parents are the problem; they are responding naturally to stress.
-            <br>
-            <br>
-            Rebecca works with the entire family system (including household members age 12 and older, if desired) to create a supportive environment that promotes student success. Her goal is to strengthen study skills, increase self-advocacy, and help families navigate the transition from high school to college with clarity and confidence.
-        
-        </div>
-        
-        <div class="row3 photo_right">
-            <img src="images/tree_sun.jpg" style="width: 350px; border-radius: 12px;">
+        <!-- Row 2: second photo + text side by side on desktop -->
+        <div class="parents-row parents-row--reverse">
+            <div class="parents-photo">
+                <img src="images/campus.jpg" alt="College campus" class="parents-img">
+            </div>
+            <div class="parents-text">
+                If your student avoids school, struggles Swith deadlines, or seems capable but underperforming, you are not alone.
+                Rebecca works with students and their parents or caregivers to build understanding around disability, executive
+                functioning, and academic success. She approaches these challenges with the belief that neither students nor
+                parents are the problem; they are responding naturally to stress.
+                <br><br>
+                Rebecca works with the entire family system (including household members age 12 and older, if desired) to create
+                a supportive environment that promotes student success. Her goal is to strengthen study skills, increase
+                self-advocacy, and help families navigate the transition from high school to college with clarity and confidence.
+            </div>
         </div>
 
-        <div class="row3">
-            Rebecca is a different kind of college coach, one who will empower your student to ask the right questions, in IEP meetings, on college tours, and of high school and college instructors, to set them up for the greatest success possible. She will help you understand the pathway from high school to college- when to disclose the disability, how to ask the right questions, and how to make sense of the answers. Rebecca provides wholistic coaching including executive functioning and study skills, AND self-advocacy and self-efficacy skills, to help your student understand themselves, how they communicate, and how to best get their academic and social needs met in the college environment.      
+        <!-- Row 3: text + third photo side by side on desktop -->
+        <div class="parents-row">
+            <div class="parents-text">
+                Rebecca is a different kind of college coach, one who will empower your student to ask the right questions in
+                IEP meetings, on college tours, and of high school and college instructors, to set them up for the greatest
+                success possible. She will help you understand the pathway from high school to college — when to disclose the
+                disability, how to ask the right questions, and how to make sense of the answers. Rebecca provides holistic
+                coaching including executive functioning and study skills, AND self-advocacy and self-efficacy skills, to help
+                your student understand themselves, how they communicate, and how to best get their academic and social needs
+                met in the college environment.
+            </div>
+            <div class="parents-photo">
+                <img src="images/tree_sun.jpg" alt="Tree in sunlight" class="parents-img">
+            </div>
         </div>
-       
+
         <div class="centered_text">
             <br>
             <a href="contact.html" class="contact_button">Contact for a Free Consultation</a>
         </div>
+
     </section>
 
-  <footer>
-  <!-- Copyright Info Script -->
-          <h6 class="copyright">Website © <script type="text/javascript">var year = new Date();document.write(year.getFullYear());</script>
-                  <a href="https://fuzzlabcorvus.github.io/cv/v2/">Fuzzlab Interactive</h6></a>
-  </footer>
+    <footer>
+        <p class="copyright">Website &copy;
+            <script>document.write(new Date().getFullYear());</script>
+            <a href="https://fuzzlab.net/">Fuzzlab Interactive</a>
+        </p>
+    </footer>
 
 </body>
 </html>

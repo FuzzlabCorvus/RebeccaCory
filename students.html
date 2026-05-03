@@ -15,17 +15,14 @@
                 <a href="index.html">Rebecca Cory, Ph.D.</a>
             </div>
 
-            <button id="hamburger" aria-expanded="true" onclick=showSidebar()>
-
-            <span>Menu</span>
-            
-            <svg  viewBox="0 0 100 80" width="40" height="40">
-            <rect width="100" height="20" rx="8"></rect>
-            <rect y="30" width="100" height="20" rx="8"></rect>
-            <rect y="60" width="100" height="20" rx="8"></rect>
-            </svg>
-          
-            </button> 
+            <button id="hamburger" aria-expanded="false" aria-controls="sidebar" onclick="showSidebar()">
+                <span>Menu</span>
+                <svg viewBox="0 0 100 80" width="40" height="40" aria-hidden="true">
+                    <rect width="100" height="20" rx="8"></rect>
+                    <rect y="30" width="100" height="20" rx="8"></rect>
+                    <rect y="60" width="100" height="20" rx="8"></rect>
+                </svg>
+            </button>
 
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
@@ -34,73 +31,72 @@
                 <li><a href="services.html">Services</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="https://www.linkedin.com/in/rebecca-cory/" target="_blank" rel="noopener">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
-                    <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
-                    </svg></a></li>
+                <li>
+                    <a href="https://www.linkedin.com/in/rebecca-cory/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                            <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+                        </svg>
+                    </a>
+                </li>
             </ul>
         </div>
 
-        <div>
-            <ul class="sidebar"> 
-                <li onclick=hideSidebar()><a href="#"><img src = "images/collapse.png" width="50px"></a></li>
-                <li><a href="index.html">Home</a></li>       
-                <li><a href="parents.html">For Parents</a></li>
-                <li><a href="students.html">For Students</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="https://www.linkedin.com/in/rebecca-cory/" target="_blank" rel="noopener">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
-                    <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
-                    </svg></a></li>
-            </ul>
-        </div>
-
-
+        <!-- Sidebar (mobile menu) -->
+        <ul class="sidebar" id="sidebar" role="navigation" aria-label="Mobile navigation">
+            <li>
+                <button onclick="hideSidebar()" aria-label="Close menu">
+                    <img src="images/collapse.png" width="50" alt="Close">
+                </button>
+            </li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="parents.html">For Parents</a></li>
+            <li><a href="students.html">For Students</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li>
+                <a href="https://www.linkedin.com/in/rebecca-cory/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                        <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+                    </svg>
+                </a>
+            </li>
+        </ul>
     </header>
 
-    <!-- <section class="hero">
-        <div class="container">
-            <h1>Strategic Consulting for Higher Education</h1>
-            <h2>Empowering Neurodivergent Teens With the Tools to Succeed in College and Beyond.</h2>
-        </div>
-    </section> -->
-
+    <!-- Students Section -->
     <section id="students">
-        
-        <div class="row1 text">
-            Do you feel disorganized, miss deadlines, or believe your grades don’t reflect your abilities? You may benefit from working with Rebecca. She understands how frustrating it can be to feel capable yet overwhelmed, and she helps students recognize that challenges often stem from mismatches between learning environments and individual needs; not personal failure. 
-            <br>
-            <br>
-            Through coaching, students learn practical organization strategies, effective communication skills, and how to advocate for their academic and social needs. The goal is greater confidence, reduced conflict at home, and improved success in school and beyond.
-        
+
+        <!-- Row 1: text + photo side by side on desktop -->
+        <div class="parents-row">
+            <div class="parents-text">
+                Do you feel disorganized, miss deadlines, or believe your grades don't reflect your abilities? You may
+                benefit from working with Rebecca. She understands how frustrating it can be to feel capable yet
+                overwhelmed, and she helps students recognize that challenges often stem from mismatches between learning
+                environments and individual needs — not personal failure.
+                <br><br>
+                Through coaching, students learn practical organization strategies, effective communication skills, and
+                how to advocate for their academic and social needs. The goal is greater confidence, reduced conflict at
+                home, and improved success in school and beyond.
+            </div>
+            <div class="parents-photo">
+                <img src="images/DuskAmusementPark.JPG" alt="Amusement park at dusk" class="parents-img">
+            </div>
         </div>
 
-        <div class="row1 photo_right">
-        <img src="images/DuskAmusementPark.JPG" style="width: 400px; border-radius: 12px;">
-        </div>
-
-        <!-- <div class="row2 photo_left">
-        <img src="images/sunset_water.jpg" style="width: 400px; border-radius: 12px;">
-        </div> -->
-
-
-            <div class="centered_text">
+        <div class="centered_text">
             <br>
             <a href="contact.html" class="contact_button">Contact for a Free Consultation</a>
         </div>
 
-        <br>
-     
-        
     </section>
 
-  <footer>
-  <!-- Copyright Info Script -->
-          <h6 class="copyright">Website © <script type="text/javascript">var year = new Date();document.write(year.getFullYear());</script>
-                  <a href="https://fuzzlabcorvus.github.io/cv/v2/">Fuzzlab Interactive</h6></a>
-  </footer>
+    <footer>
+        <p class="copyright">Website &copy;
+            <script>document.write(new Date().getFullYear());</script>
+            <a href="https://fuzzlabcorvus.github.io/cv/v2/">Fuzzlab Interactive</a>
+        </p>
+    </footer>
 
 </body>
 </html>
