@@ -171,7 +171,7 @@ nav {
   .hero {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
     padding: 40px 0;
   }
 
