@@ -209,7 +209,7 @@ nav {
   flex-direction: column;
   gap: 1.5rem;
   margin-bottom: 2.5rem;
-  align-items: center;
+  align-items: flex-start;
 }
 
 @media (min-width: 768px) {
@@ -221,7 +221,7 @@ nav {
 
   /* Alternate layout: photo on left, text on right */
   .parents-row--reverse {
-    flex-direction: row;
+    flex-direction: row-reverse;
   }
 
   .parents-text {
@@ -245,13 +245,14 @@ nav {
 
 /* --- About Section --- */
 #about {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
   position: relative;
   width: 80%;
   gap: 10px;
   padding: 1em;
   margin: 20px auto;
+  align-items: center;
 }
 
 .left-column  { grid-column: 1; }
