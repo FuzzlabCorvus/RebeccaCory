@@ -12,11 +12,14 @@
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   font-family: Garamond, Georgia, sans-serif;
   font-size: 18px;
   margin: 0;
   color: var(--text);
   line-height: 1.6;
+  min-height: 100dvh;
 }
 
 @media (min-width: 768px) {
@@ -373,6 +376,10 @@ nav {
 
 
 /* --- Contact Form --- */
+#contact {
+  flex: 1;
+}
+
 .contact-form {
   display: grid;
   grid-template-columns: 1fr;
