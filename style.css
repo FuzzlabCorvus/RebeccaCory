@@ -284,7 +284,7 @@ nav {
 
 
 /* --- Parents / Students grid sections --- */
-#parents-grid,
+/* #parents-grid,
 #students {
   display: grid;
   grid-template-columns: 1fr;
@@ -295,13 +295,13 @@ nav {
   justify-content: center;
   gap: 1rem;
   justify-items: stretch;
-}
+} */
 
 @media (min-width: 768px) {
   #parents-grid {
     grid-template-columns: repeat(3, 1fr);
     font-size: 1.5rem;
-    width: 90%;
+    width: 80%;
   }
 
   #students {
