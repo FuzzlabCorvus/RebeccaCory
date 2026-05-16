@@ -37,7 +37,7 @@ ul {
 }
 
 .container {
-  width: 90%;
+  width: 80%;
   max-width: 1200px;
   margin: auto;
 }
@@ -60,7 +60,9 @@ header {
   border-bottom: 2px solid var(--primary);
   position: sticky;
   top: 0;
-  z-index: 1000;
+  left: 0;
+  justify-content: flex-start;
+  z-index: 100;
   font-size: 1rem;
 }
 
@@ -82,13 +84,14 @@ nav {
   font-size: 1.5rem;
   font-weight: bold;
   color: var(--primary);
+  margin-bottom: 0;
 }
 
 @media (min-width: 768px) {
   .logo { font-size: 2.5rem; }
 }
 
-/* Mobile: hide desktop nav, show hamburger */
+/* Mobile: hide desktop nav, show hamburger menu */
 .nav-links {
   display: none;
 }
@@ -107,7 +110,7 @@ nav {
   padding: 0;
 }
 
-/* Desktop: show nav, hide hamburger */
+/* Desktop: show nav, hide hamburger menu */
 @media (min-width: 768px) {
   .nav-links {
     display: flex;
@@ -165,9 +168,10 @@ nav {
   margin: 0 1em;
 }
 
-.hero h2 {
-  font-size: 1.5rem;
+h2 {
+  font-size: 1rem;
   margin: 0 1em;
+  margin-top: -15px;
 }
 
 @media (min-width: 768px) {
@@ -185,11 +189,11 @@ nav {
     grid-row: 2;
   }
 
-  .hero h2 {
+  /* .hero h2 {
     margin-left: 1em;
     grid-column: 1 / span 2;
     grid-row: 2;
-  }
+  } */
 }
 
 
@@ -273,6 +277,7 @@ nav {
   max-width: 250px;
   height: auto;
   border-radius: 12px;
+  place-self: center;
 }
 
 #headshot {
@@ -351,9 +356,8 @@ nav {
 /* --- Photo Grid --- */
 .photo-grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(3, minmax(300px, 1fr));
   gap: 10px;
-  justify-content: center;
 }
 
 @media (min-width: 768px) {
