@@ -37,9 +37,10 @@ ul {
 }
 
 .container {
-  width: 80%;
+  width: 75%;
   max-width: 1200px;
-  margin: auto;
+  margin:auto;
+  text-align: justify;
 }
 
 .centered_text {
@@ -56,14 +57,14 @@ span {
 /* --- Header --- */
 header {
   background: #fff;
-  padding: 1rem 0;
+  padding: 1rem 2rem;
   border-bottom: 2px solid var(--primary);
   position: sticky;
   top: 0;
   left: 0;
-  justify-content: flex-start;
   z-index: 100;
   font-size: 1rem;
+
 }
 
 @media (min-width: 768px) {
@@ -75,9 +76,11 @@ header {
 nav {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+    text-align: left;
   padding: 0;
   margin: auto;
+  width: 80%;
 }
 
 .logo {
@@ -255,7 +258,7 @@ h2 {
   width: 80%;
   gap: 10px;
   padding: 1em;
-  margin: 20px auto;
+  margin: auto;
   align-items: center;
 }
 
@@ -264,7 +267,7 @@ h2 {
 
 @media (min-width: 768px) {
   #about {
-    grid-template-columns: 1fr 1fr 1fr;
+    /* grid-template-columns: 1fr 1fr 1fr; */
     width: 80%;
   }
 
@@ -281,11 +284,13 @@ h2 {
 }
 
 #headshot {
+  float: left;
   width: 100%;
   max-width: 350px;
   height: auto;
   border-radius: 50%;
   border: 3px solid var(--text);
+  margin: 0 40px 20px 0;
 }
 
 
@@ -355,13 +360,14 @@ h2 {
 
 /* --- Photo Grid --- */
 .photo-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(300px, 1fr));
-  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 @media (min-width: 768px) {
   .photo-grid {
+    display: grid;
     grid-template-columns: repeat(3, minmax(300px, 1fr));
   }
 }
